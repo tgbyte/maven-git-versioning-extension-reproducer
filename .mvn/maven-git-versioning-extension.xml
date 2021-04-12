@@ -1,0 +1,24 @@
+<gitVersioning>
+  <disable>false</disable>
+  <updatePom>false</updatePom>
+  <preferTags>true</preferTags>
+
+  <branch>
+    <pattern>main</pattern>
+    <versionFormat>${version}</versionFormat>
+  </branch>
+
+  <branch>
+    <pattern><![CDATA[feature/(?<feature>.+)]]></pattern>
+    <versionFormat>${version}</versionFormat>
+  </branch>
+
+  <tag>
+    <pattern><![CDATA[v(?<tagVersion>[0-9].*)]]></pattern>
+    <versionFormat>${tagVersion}</versionFormat>
+  </tag>
+
+  <commit>
+    <versionFormat>${version}</versionFormat>
+  </commit>
+</gitVersioning>
